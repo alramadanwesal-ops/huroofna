@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حروفنا المرحة</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e4f6ff;--card:#fff;--ink:#2b3d5b;--soft:#5b6b85;--box:#f5faff;--line:#cfeaf5;--mint:#d9f4e6;--mintink:#1f8a5b;--pink:#f5a6c1;--tile:#fff3c4;--tileb:#f3c75a;--slot:#eef7fb;--ok:#bdeccd;--bad:#ffd0d0;--dot:#fff;--shadow:rgba(60,140,180,.18);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10263a;--card:#1a3550;--ink:#eaf4ff;--soft:#a9bfd6;--box:#17304a;--line:#2c4d6c;--mint:#1d4a3b;--mintink:#8be3b9;--pink:#d9809f;--tile:#4a4020;--tileb:#c9a23a;--slot:#142b42;--ok:#1f5a3c;--bad:#5a2a2a;--dot:#3b5a78;--shadow:rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#10263a;--card:#1a3550;--ink:#eaf4ff;--soft:#a9bfd6;--box:#17304a;--line:#2c4d6c;--mint:#1d4a3b;--mintink:#8be3b9;--pink:#d9809f;--tile:#4a4020;--tileb:#c9a23a;--slot:#142b42;--ok:#1f5a3c;--bad:#5a2a2a;--dot:#3b5a78;--shadow:rgba(0,0,0,.35)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:'Tajawal','Segoe UI',Tahoma,Arial,sans-serif;color:var(--ink);background:var(--bg);background-image:radial-gradient(var(--dot) 3px,transparent 3.5px);background-size:90px 90px;overflow-x:hidden}
+.cloud{position:fixed;width:120px;height:46px;background:#fff;border-radius:50px;opacity:.7;filter:blur(1px);z-index:0}
+.cloud:before,.cloud:after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud:before{width:56px;height:56px;top:-26px;left:18px}.cloud:after{width:42px;height:42px;top:-18px;left:62px}
+.c1{top:120px;left:4%}.c2{top:260px;right:3%}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cloud{opacity:.12}}
+.top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding:18px 20px 0;max-width:900px;margin:0 auto}
+.brand{font-weight:800;font-size:1.05rem}
+.snd{font-family:inherit;font-weight:700;color:var(--ink);background:var(--card);border:3px solid var(--line);border-radius:18px;padding:10px 16px;box-shadow:0 5px 0 var(--line);cursor:pointer;font-size:.95rem}
+.card{position:relative;z-index:1;max-width:640px;margin:22px auto 40px;background:var(--card);border-radius:36px;padding:28px 22px 34px;text-align:center;box-shadow:0 18px 40px var(--shadow);width:calc(100% - 28px)}
+.mascot{width:150px;height:150px;margin:0 auto 6px;display:block}
+.pill{display:inline-block;background:var(--mint);color:var(--mintink);font-weight:700;padding:10px 26px;border-radius:30px;margin:10px 0 14px}
+h1{font-size:1.25rem;margin:6px 0}
+.sub{color:var(--soft);font-size:1.1rem;margin:8px 0 22px}
+.info{background:var(--box);border:2px solid var(--line);border-radius:26px;padding:16px;line-height:1.9;margin-bottom:26px}
+.info b{display:block;font-size:1.05rem}.info span{display:block;color:var(--soft)}
+.btn{font-family:inherit;font-weight:800;font-size:1.15rem;color:var(--ink);background:var(--pink);border:0;border-radius:24px;padding:18px 46px;box-shadow:0 6px 0 rgba(0,0,0,.12);cursor:pointer;transition:transform .1s}
+.btn:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.12)}
+.btn.alt{background:var(--tile);border:3px solid var(--tileb);font-size:1rem;padding:10px 22px}
+.hide{display:none!important}
+.prog{display:flex;justify-content:space-between;align-items:center;font-weight:700;margin-bottom:8px}
+.bar{height:12px;background:var(--slot);border-radius:10px;overflow:hidden;flex:1;margin:0 12px}
+.bar i{display:block;height:100%;width:0;background:var(--pink);border-radius:10px;transition:width .4s}
+.riddle{background:var(--box);border:2px dashed var(--tileb);border-radius:26px;padding:16px 18px;margin:14px 0 18px;font-size:1.2rem;line-height:1.8}
+.riddle small{display:block;color:var(--mintink);font-weight:800;margin-bottom:4px}
+.slots,.tiles{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:14px 0}
+.slot{width:62px;height:70px;border-radius:18px;background:var(--slot);border:3px dashed var(--line);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:800;cursor:pointer}
+.slot.f{border-style:solid;border-color:var(--tileb);background:var(--tile)}
+.tile{width:62px;height:70px;border-radius:18px;background:var(--tile);border:3px solid var(--tileb);box-shadow:0 5px 0 var(--tileb);font-family:inherit;font-size:2rem;font-weight:800;color:var(--ink);cursor:pointer}
+.tile:disabled{opacity:.25;box-shadow:none;cursor:default}
+.slots.ok .slot{background:var(--ok);border-color:#59c487}
+.slots.bad{animation:sh .45s}.slots.bad .slot{background:var(--bad)}
+@keyframes sh{20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+.msg{min-height:2rem;font-weight:800;font-size:1.15rem;margin:6px 0 10px}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.stars{font-size:2.4rem;margin:10px 0}
+.pop{animation:pop .5s}@keyframes pop{50%{transform:scale(1.12)}}
+.conf{position:fixed;top:-20px;font-size:1.6rem;z-index:5;pointer-events:none;animation:fall 2.4s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="cloud c1"></div><div class="cloud c2"></div>
+<div class="top">
+  <div class="brand">✦ حروفنا المرحة ✦</div>
+  <button class="snd" id="snd">🔊 إيقاف الأصوات</button>
+</div>
+
+<main class="card" id="card">
+  <svg class="mascot" id="mascot" viewBox="0 0 160 160" aria-hidden="true">
+    <ellipse cx="80" cy="88" rx="58" ry="62" fill="#f8e3d0"/>
+    <path d="M30 60 Q18 30 36 22 Q56 28 58 52Z" fill="#f6ab7a"/>
+    <path d="M130 60 Q142 30 124 22 Q104 28 102 52Z" fill="#f6ab7a"/>
+    <ellipse cx="80" cy="82" rx="56" ry="58" fill="#f6ab7a"/>
+    <ellipse cx="80" cy="82" rx="50" ry="52" fill="#ffd36e"/>
+    <ellipse cx="58" cy="78" rx="6" ry="9" fill="#2b3d5b"/>
+    <ellipse cx="102" cy="78" rx="6" ry="9" fill="#2b3d5b"/>
+    <ellipse cx="46" cy="98" rx="10" ry="6" fill="#f9a99b"/>
+    <ellipse cx="114" cy="98" rx="10" ry="6" fill="#f9a99b"/>
+    <path id="mouth" d="M68 100 Q80 114 92 100" fill="none" stroke="#7a4a3a" stroke-width="4" stroke-linecap="round"/>
+  </svg>
+
+  <section id="start">
+    <div class="pill">تعلّمي • العبي • تألّقي</div>
+    <h1>مغامرات حروف الهجاء</h1>
+    <p class="sub">هيا نرتّب الحروف ونكتشف الكلمة!</p>
+    <div class="info"><b>معلمة الصف الأول: وصال الرمضان</b><span>المدرسة: نهضة الجيل</span><span>مديرة المدرسة: ابتسام الشهري</span></div>
+    <button class="btn" id="go">✨ ابدئي المغامرة</button>
+  </section>
+
+  <section id="play" class="hide">
+    <div class="prog"><span id="lv"></span><div class="bar"><i id="fill"></i></div><span id="sc">⭐ 0</span></div>
+    <div class="riddle"><small>🧩 لغز</small><span id="q"></span><div id="hint" style="color:var(--soft);font-size:1rem;margin-top:6px"></div></div>
+    <div class="slots" id="slots" dir="rtl"></div>
+    <div class="msg" id="msg"></div>
+    <div class="tiles" id="tiles" dir="rtl"></div>
+    <div class="row">
+      <button class="btn alt" id="hbtn">💡 تلميح</button>
+      <button class="btn alt" id="clr">↺ إعادة</button>
+      <button class="btn hide" id="next">التالي ←</button>
+    </div>
+  </section>
+
+  <section id="end" class="hide">
+    <div class="pill">أحسنتِ يا بطلة!</div>
+    <h1>أنهيتِ كل الألغاز</h1>
+    <div class="stars" id="stars"></div>
+    <p class="sub" id="final"></p>
+    <button class="btn" id="again">🔁 العبي من جديد</button>
+  </section>
+</main>
+
+<script>
+(function(){
+var LV=[
+ {w:"شمس",q:"أظهر في السماء صباحاً، أعطي الدفء والنور للجميع. من أنا؟"},
+ {w:"قمر",q:"أظهر في الليل وأنير الظلام، وأحياناً أكون هلالاً. من أنا؟"},
+ {w:"كتاب",q:"فيّ صفحات وقصص جميلة، نقرأ فيّ ونتعلم. من أنا؟"},
+ {w:"قلم",q:"بي نكتب ونرسم على الورق. من أنا؟"},
+ {w:"وردة",q:"زهرة جميلة ذات رائحة طيبة وألوان زاهية. من أنا؟"},
+ {w:"سمكة",q:"أعيش في الماء وأسبح بزعانفي. من أنا؟"},
+ {w:"تفاحة",q:"فاكهة حلوة حمراء تنمو على الشجرة. من أنا؟"},
+ {w:"مدرسة",q:"مكان نتعلم فيه مع معلمتنا وصديقاتنا كل يوم. ما هو؟"},
+ {w:"بيت",q:"نسكن فيه مع أسرتنا ونشعر فيه بالأمان. ما هو؟"},
+ {w:"قطة",q:"حيوان أليف يموء ويحب شرب الحليب. من أنا؟"},
+ {w:"أسد",q:"ملك الغابة وصوتي زئير قوي. من أنا؟"},
+ {w:"جمل",q:"سفينة الصحراء، أحمل الأثقال وأتحمل العطش. من أنا؟"},
+ {w:"فيل",q:"حيوان ضخم أذناي كبيرتان ولي خرطوم طويل. من أنا؟"},
+ {w:"طائرة",q:"أطير في السماء وأنقل المسافرين بين المدن. ما أنا؟"},
+ {w:"سيارة",q:"لها أربع عجلات نركبها لنذهب إلى أماكن كثيرة. ما هي؟"},
+ {w:"موزة",q:"فاكهة صفراء لها قشرة نزيلها قبل الأكل. ما هي؟"},
+ {w:"ماء",q:"سائل شفاف نشربه ولا نستطيع العيش بدونه. ما هو؟"},
+ {w:"نجمة",q:"أتلألأ في السماء ليلاً وأبدو صغيرة لأني بعيدة. من أنا؟"},
+ {w:"غيمة",q:"أطفو في السماء وأُنزل المطر. من أنا؟"},
+ {w:"باب",q:"أُفتح وأُغلق وأحمي البيت. من أنا؟"},
+ {w:"كرسي",q:"نجلس عليّ ولي أربع أرجل. من أنا؟"},
+ {w:"حقيبة",q:"نحمل فيها كتبنا وأقلامنا إلى المدرسة. ما هي؟"},
+ {w:"ساعة",q:"أعرّفك بالوقت وعقاربي تدور. من أنا؟"},
+ {w:"علم",q:"يرفرف عالياً ويمثّل وطننا. ما هو؟"},
+ {w:"نخلة",q:"شجرة طويلة تعطينا التمر اللذيذ. من أنا؟"},
+ {w:"جبل",q:"مرتفع كبير من الصخور يصل إلى السحاب. ما هو؟"},
+ {w:"بحر",q:"مياه زرقاء واسعة تسبح فيها الأسماك. ما هو؟"},
+ {w:"عصفور",q:"طائر صغير يغرّد ويبني عشه على الشجرة. من أنا؟"},
+ {w:"فراشة",q:"حشرة ملونة بأجنحة جميلة تطير بين الأزهار. من أنا؟"},
+ {w:"مطر",q:"ينزل من الغيوم فتفرح الأرض ويكبر الزرع. ما هو؟"}
+];
+var $=function(i){return document.getElementById(i)};
+var on=true,ac=null,i=0,score=0,slots=[],tiles=[],tries=0,done=false;
+function beep(f,d,t){if(!on)return;try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();var o=ac.createOscillator(),g=ac.createGain();o.type=t||'sine';o.frequency.value=f;g.gain.value=.12;o.connect(g);g.connect(ac.destination);o.start();g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+d);o.stop(ac.currentTime+d)}catch(e){}}
+function melody(a){a.forEach(function(f,k){setTimeout(function(){beep(f,.25)},k*140)})}
+function face(h){$('mouth').setAttribute('d',h?'M64 98 Q80 120 96 98':'M68 108 Q80 98 92 108')}
+function show(id){['start','play','end'].forEach(function(s){$(s).classList.toggle('hide',s!==id)})}
+function shuffle(w){var a=w.split(''),r;for(var n=0;n<30;n++){r=a.slice();for(var k=r.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=r[k];r[k]=r[j];r[j]=t}if(r.join('')!==w)return r}return a.reverse()}
+function load(){
+ var L=LV[i];done=false;tries=0;face(true);
+ $('lv').textContent='اللغز '+(i+1)+' من '+LV.length;
+ $('fill').style.width=(i/LV.length*100)+'%';
+ $('sc').textContent='⭐ '+score;
+ $('q').textContent=L.q;$('hint').textContent='';$('msg').textContent='';
+ var pool='ابتثجحخدذرزسشصضطظعغفقكلمنهوي'.split('').filter(function(c){return L.w.indexOf(c)<0}),ex='';
+ while(ex.length<8-L.w.length&&pool.length){ex+=pool.splice(Math.floor(Math.random()*pool.length),1)[0]}
+ tiles=shuffle(L.w+ex).map(function(c){return{c:c,u:false}});
+ slots=L.w.split('').map(function(){return -1});
+ $('next').classList.add('hide');$('hbtn').classList.remove('hide');$('clr').classList.remove('hide');
+ $('slots').className='slots';draw();
+}
+function draw(){
+ var s=$('slots');s.innerHTML='';
+ slots.forEach(function(t,k){var d=document.createElement('div');d.className='slot'+(t>=0?' f':'');d.textContent=t>=0?tiles[t].c:'';d.onclick=function(){back(k)};s.appendChild(d)});
+ var T=$('tiles');T.innerHTML='';
+ tiles.forEach(function(t,k){var b=document.createElement('button');b.className='tile';b.textContent=t.c;b.disabled=t.u;b.onclick=function(){put(k)};T.appendChild(b)});
+}
+function put(k){if(done||tiles[k].u)return;var p=slots.indexOf(-1);if(p<0)return;slots[p]=k;tiles[k].u=true;beep(520+p*60,.15);draw();if(slots.indexOf(-1)<0)check()}
+function back(p){if(done||slots[p]<0)return;tiles[slots[p]].u=false;slots[p]=-1;beep(330,.1);draw()}
+function check(){
+ var w=slots.map(function(t){return tiles[t].c}).join('');
+ if(w===LV[i].w){
+  done=true;var g=tries===0?1:0;score+=g;$('sc').textContent='⭐ '+score;
+  $('slots').classList.add('ok');$('msg').textContent=g?'أحسنتِ! إجابة صحيحة 🎉':'صحيح! أحسنتِ المحاولة 👏';
+  $('card').classList.remove('pop');void $('card').offsetWidth;$('card').classList.add('pop');
+  melody([523,659,784,1047]);confetti();face(true);
+  $('hbtn').classList.add('hide');$('clr').classList.add('hide');$('next').classList.remove('hide');
+  $('next').textContent=i===LV.length-1?'النتيجة ←':'التالي ←';
+ }else{
+  tries++;face(false);beep(200,.3,'triangle');$('msg').textContent='حاولي مرة أخرى 💪';
+  $('slots').className='slots bad';
+  setTimeout(function(){$('slots').className='slots';clr();face(true);$('msg').textContent=''},900);
+ }
+}
+function clr(){if(done)return;tiles.forEach(function(t){t.u=false});slots=slots.map(function(){return -1});draw()}
+function confetti(){var e=['🎉','⭐','✨','🎈','💛'];for(var k=0;k<18;k++){var d=document.createElement('div');d.className='conf';d.textContent=e[k%e.length];d.style.left=Math.random()*100+'vw';d.style.animationDelay=Math.random()*.6+'s';document.body.appendChild(d);setTimeout(function(x){x.remove()},3200,d)}}
+function finish(){
+ show('end');var n=score,t=LV.length,st=n>=t*0.8?3:n>=t/2?2:1;
+ $('stars').textContent='⭐'.repeat(st)+'☆'.repeat(3-st);
+ $('final').textContent='حصلتِ على '+n+' من '+t+' من المحاولة الأولى';
+ melody([523,659,784,659,784,1047]);confetti();
+}
+$('go').onclick=function(){beep(660,.2);i=0;score=0;show('play');load()};
+$('next').onclick=function(){if(i===LV.length-1){finish()}else{i++;load()}};
+$('clr').onclick=clr;
+$('hbtn').onclick=function(){var w=LV[i].w;$('hint').textContent='💡 الكلمة تبدأ بحرف «'+w[0]+'» وعدد حروفها '+w.length+' (انتبهي: بين الحروف حروف زائدة)';beep(700,.15)};
+$('again').onclick=function(){face(true);i=0;score=0;show('play');load()};
+$('snd').onclick=function(){on=!on;this.textContent=on?'🔊 إيقاف الأصوات':'🔇 تشغيل الأصوات'};
+})();
+</script>
+</body>
+</html>
